@@ -1,0 +1,878 @@
+!SESSION 2021-11-29 18:57:55.695 -----------------------------------------------
+eclipse.buildId=4.12.1.202110260750
+java.version=17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.ui 2 0 2021-11-29 18:58:39.420
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-11-29 18:58:39.420
+!MESSAGE Cannot bind to an undefined command: plug-in='com.genuitec.eclipse.theming.ui', id='com.genuitec.myeclipse.help.darktheme.commandid'
+
+!ENTRY com.genuitec.eclipse.theming.ui 1 0 2021-11-29 18:58:41.598
+!MESSAGE A DevStyle Theme is being activated on this workspace; preparing colors and configuration
+
+!ENTRY com.genuitec.eclipse.theming.ui 1 0 2021-11-29 18:58:41.641
+!MESSAGE DevStyle has archived current color configurations to alternate preferences - will be restored when switching out of the DevStyle Theme
+
+!ENTRY org.eclipse.jface 2 0 2021-11-29 18:58:43.973
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-11-29 18:58:43.973
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6f627a1a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@655b9169,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 2 2 2021-11-29 19:02:51.391
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 19:06:53.663
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 19:06:53.702
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@1992e1e6[org.springframework.tooling.boot.ls:1.29.0.202110250907(id=550)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 19:06:53.817
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 19:06:54.292
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 19:07:06.332
+!MESSAGE Boot LS startup time from start to initialized: 12460ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 19:07:06.717
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.WeiWHDYMisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 19:07:06.719
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 19:07:06.722
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 19:07:06.723
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 19:07:06.727
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 19:07:06.727
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.WeiWHDYM => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 19:07:06.998
+!MESSAGE classpath=93 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 19:07:07.002
+!MESSAGE buffering callback sts4.classpath.WeiWHDYM todo false 93
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 19:07:07.003
+!MESSAGE executing callback sts4.classpath.WeiWHDYM 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 19:07:09.021
+!MESSAGE executing callback sts4.classpath.WeiWHDYM FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2021-11-29 19:07:09.024
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:37)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 2 0 2021-11-29 19:14:49.418
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+!SESSION 2021-11-29 21:43:32.275 -----------------------------------------------
+eclipse.buildId=4.12.1.202110260750
+java.version=17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-11-29 21:43:55.208
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2021-11-29 21:44:13.380
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-11-29 21:44:13.380
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1eda853f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3f0751b0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 21:44:34.818
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 21:44:34.845
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@380cda66[org.springframework.tooling.boot.ls:1.29.0.202110250907(id=550)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 21:44:34.915
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 21:44:35.162
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 21:45:14.058
+!MESSAGE Boot LS startup time from start to initialized: 39067ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 21:45:16.608
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.UCEWTvFBisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 21:45:16.767
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 21:45:16.771
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 21:45:16.773
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 21:45:16.774
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 21:45:16.775
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.UCEWTvFB => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 21:45:20.453
+!MESSAGE classpath=93 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 21:45:20.513
+!MESSAGE buffering callback sts4.classpath.UCEWTvFB todo false 93
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 21:45:20.514
+!MESSAGE executing callback sts4.classpath.UCEWTvFB 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 21:45:22.547
+!MESSAGE executing callback sts4.classpath.UCEWTvFB FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2021-11-29 21:45:22.595
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:37)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 2 0 2021-11-29 21:45:38.903
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.ui 2 2 2021-11-29 21:56:39.047
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 22:04:30.222
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.UCEWTvFB
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 22:04:30.282
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.UCEWTvFB
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 22:04:30.283
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 22:04:30.284
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.UCEWTvFB => OK
+!SESSION 2021-11-29 22:30:19.814 -----------------------------------------------
+eclipse.buildId=4.12.1.202110260750
+java.version=17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2021-11-29 22:31:14.266
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-11-29 22:31:14.267
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@65cf8da0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@823f978,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 22:31:40.540
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 22:31:40.592
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@44c46240[org.springframework.tooling.boot.ls:1.29.0.202110250907(id=550)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 22:31:40.618
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 22:31:40.970
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 22:32:20.845
+!MESSAGE Boot LS startup time from start to initialized: 40130ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 22:32:21.569
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.BuHWGHpHisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 22:32:21.690
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 22:32:21.695
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 22:32:21.696
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 22:32:21.696
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 22:32:21.697
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.BuHWGHpH => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 22:32:22.198
+!MESSAGE classpath=93 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 22:32:22.201
+!MESSAGE buffering callback sts4.classpath.BuHWGHpH todo false 93
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 22:32:22.202
+!MESSAGE executing callback sts4.classpath.BuHWGHpH 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 22:32:24.257
+!MESSAGE executing callback sts4.classpath.BuHWGHpH FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2021-11-29 22:32:24.258
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:37)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.ui 2 2 2021-11-29 22:33:57.944
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 23:02:56.698
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.BuHWGHpH
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 23:02:56.757
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.BuHWGHpH
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 23:02:56.758
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 23:02:56.758
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.BuHWGHpH => OK
+!SESSION 2021-11-30 06:55:05.411 -----------------------------------------------
+eclipse.buildId=4.12.1.202110260750
+java.version=17
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2021-11-30 06:56:02.682
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-11-30 06:56:02.682
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1bd53c5c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@38affd02,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-30 06:56:42.823
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-30 06:56:42.848
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@3173b030[org.springframework.tooling.boot.ls:1.29.0.202110250907(id=550)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-30 06:56:42.868
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-30 06:56:43.593
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-30 06:57:24.960
+!MESSAGE Boot LS startup time from start to initialized: 42022ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-30 06:57:25.735
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.nIkvXyAZisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-30 06:57:25.863
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-30 06:57:25.867
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-30 06:57:25.868
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-30 06:57:25.868
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-30 06:57:25.868
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.nIkvXyAZ => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-30 06:57:26.638
+!MESSAGE classpath=93 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-30 06:57:26.673
+!MESSAGE buffering callback sts4.classpath.nIkvXyAZ todo false 93
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-30 06:57:26.675
+!MESSAGE executing callback sts4.classpath.nIkvXyAZ 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-30 06:57:28.709
+!MESSAGE executing callback sts4.classpath.nIkvXyAZ FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2021-11-30 06:57:28.709
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:37)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.genuitec.eclipse.monitor 4 0 2021-11-30 07:42:04.517
+!MESSAGE Unable to save client metrics
+!STACK 0
+java.io.FileNotFoundException: /home/diego/Documentos/sts-4.12.1.RELEASE/configuration/com.genuitec.eclipse.monitor/metrics-202111-1450949717.properties (No such file or directory)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+	at com.genuitec.eclipse.monitor.internal.collector.client.ClientMetricsCollector.saveToFile(ClientMetricsCollector.java:151)
+	at com.genuitec.eclipse.monitor.internal.collector.client.ClientMetricsCollector$PeriodicalSaveJob.run(ClientMetricsCollector.java:383)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.core 4 0 2021-11-30 07:57:17.082
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.io.IOException: Exception in opening zip file: /home/diego/Documentos/sts-4.12.1.RELEASE/plugins/org.eclipse.egit.core_5.13.0.202109080827-r.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:277)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:51)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:135)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:274)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathEntry.findEntry(ClasspathEntry.java:195)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findClassImpl(ClasspathManager.java:623)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClassImpl(ClasspathManager.java:609)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClassImpl(ClasspathManager.java:589)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:568)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:388)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:446)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:170)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at org.eclipse.egit.ui.internal.ExternalRepositoryScanner$RepositoryChangeScanner.lambda$0(ExternalRepositoryScanner.java:155)
+	at org.eclipse.jgit.events.IndexChangedEvent.dispatch(IndexChangedEvent.java:48)
+	at org.eclipse.jgit.events.IndexChangedEvent.dispatch(IndexChangedEvent.java:1)
+	at org.eclipse.jgit.events.ListenerList.dispatch(ListenerList.java:100)
+	at org.eclipse.egit.core.RepositoryHandle.fireEvent(RepositoryHandle.java:135)
+	at org.eclipse.egit.core.RepositoryHandle.lambda$1(RepositoryHandle.java:108)
+	at org.eclipse.jgit.events.IndexChangedEvent.dispatch(IndexChangedEvent.java:48)
+	at org.eclipse.jgit.events.IndexChangedEvent.dispatch(IndexChangedEvent.java:1)
+	at org.eclipse.jgit.events.ListenerList.dispatch(ListenerList.java:100)
+	at org.eclipse.jgit.lib.Repository.fireEvent(Repository.java:167)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.notifyIndexChanged(FileRepository.java:507)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.detectIndexChanges(FileRepository.java:498)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.scanForRepoChanges(FileRepository.java:479)
+	at org.eclipse.egit.core.RepositoryHandle.scanForRepoChanges(RepositoryHandle.java:338)
+	at org.eclipse.egit.ui.internal.ExternalRepositoryScanner$RepositoryChangeScanner.run(ExternalRepositoryScanner.java:281)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.nio.file.NoSuchFileException: /home/diego/Documentos/sts-4.12.1.RELEASE/plugins/org.eclipse.egit.core_5.13.0.202109080827-r.jar
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+	at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1851)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1264)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:709)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:243)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:172)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:186)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:264)
+	... 31 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2021-11-30 07:57:17.146
+!MESSAGE An internal error occurred during: "Git Repository Change Scanner".
+!STACK 0
+java.lang.NoClassDefFoundError: org/eclipse/egit/core/internal/job/RuleUtil
+	at org.eclipse.egit.ui.internal.ExternalRepositoryScanner$RepositoryChangeScanner.lambda$0(ExternalRepositoryScanner.java:155)
+	at org.eclipse.jgit.events.IndexChangedEvent.dispatch(IndexChangedEvent.java:48)
+	at org.eclipse.jgit.events.IndexChangedEvent.dispatch(IndexChangedEvent.java:1)
+	at org.eclipse.jgit.events.ListenerList.dispatch(ListenerList.java:100)
+	at org.eclipse.egit.core.RepositoryHandle.fireEvent(RepositoryHandle.java:135)
+	at org.eclipse.egit.core.RepositoryHandle.lambda$1(RepositoryHandle.java:108)
+	at org.eclipse.jgit.events.IndexChangedEvent.dispatch(IndexChangedEvent.java:48)
+	at org.eclipse.jgit.events.IndexChangedEvent.dispatch(IndexChangedEvent.java:1)
+	at org.eclipse.jgit.events.ListenerList.dispatch(ListenerList.java:100)
+	at org.eclipse.jgit.lib.Repository.fireEvent(Repository.java:167)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.notifyIndexChanged(FileRepository.java:507)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.detectIndexChanges(FileRepository.java:498)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.scanForRepoChanges(FileRepository.java:479)
+	at org.eclipse.egit.core.RepositoryHandle.scanForRepoChanges(RepositoryHandle.java:338)
+	at org.eclipse.egit.ui.internal.ExternalRepositoryScanner$RepositoryChangeScanner.run(ExternalRepositoryScanner.java:281)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.egit.core.internal.job.RuleUtil cannot be found by org.eclipse.egit.ui_5.13.0.202109080827-r
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:454)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:170)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	... 16 more
+
+!ENTRY org.eclipse.jgit.gpg.bc 4 0 2021-11-30 07:57:17.750
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.io.IOException: Exception in opening zip file: /home/diego/Documentos/sts-4.12.1.RELEASE/plugins/org.eclipse.jgit.gpg.bc_5.13.0.202109080827-r.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:277)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:51)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:135)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:274)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathEntry.findEntry(ClasspathEntry.java:195)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findClassImpl(ClasspathManager.java:623)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClassImpl(ClasspathManager.java:609)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClassImpl(ClasspathManager.java:596)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:568)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:388)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:467)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:170)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at java.base/java.util.ResourceBundle$Control.newBundle0(ResourceBundle.java:3170)
+	at java.base/java.util.ResourceBundle$Control.newBundle(ResourceBundle.java:3151)
+	at java.base/java.util.ResourceBundle.loadBundle(ResourceBundle.java:1984)
+	at java.base/java.util.ResourceBundle.findBundle(ResourceBundle.java:1770)
+	at java.base/java.util.ResourceBundle.findBundle(ResourceBundle.java:1722)
+	at java.base/java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1656)
+	at java.base/java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1586)
+	at java.base/java.util.ResourceBundle.getBundle(ResourceBundle.java:1280)
+	at org.eclipse.jgit.nls.TranslationBundle.load(TranslationBundle.java:138)
+	at org.eclipse.jgit.nls.GlobalBundleCache.lookupBundle(GlobalBundleCache.java:64)
+	at org.eclipse.jgit.nls.NLS.get(NLS.java:125)
+	at org.eclipse.jgit.nls.NLS.getBundleFor(NLS.java:101)
+	at org.eclipse.jgit.internal.JGitText.get(JGitText.java:28)
+	at org.eclipse.jgit.errors.RepositoryNotFoundException.message(RepositoryNotFoundException.java:69)
+	at org.eclipse.jgit.errors.RepositoryNotFoundException.<init>(RepositoryNotFoundException.java:53)
+	at org.eclipse.jgit.errors.RepositoryNotFoundException.<init>(RepositoryNotFoundException.java:31)
+	at org.eclipse.egit.core.RepositoryCache$Builder.createRepository(RepositoryCache.java:216)
+	at org.eclipse.egit.core.RepositoryCache$Builder.build(RepositoryCache.java:241)
+	at org.eclipse.egit.core.RepositoryCache$1.build(RepositoryCache.java:277)
+	at org.eclipse.egit.core.RepositoryCache$Builder.build(RepositoryCache.java:1)
+	at org.eclipse.jgit.submodule.SubmoduleWalk.getSubmoduleRepository(SubmoduleWalk.java:267)
+	at org.eclipse.jgit.submodule.SubmoduleWalk.getRepository(SubmoduleWalk.java:776)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:585)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.lambda$8(IndexDiffCacheEntry.java:634)
+	at org.eclipse.egit.core.UnitOfWork.run(UnitOfWork.java:115)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:627)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$5(IndexDiffCacheEntry.java:621)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$2.reload(IndexDiffCacheEntry.java:398)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$IndexDiffReloadJob.run(IndexDiffCacheEntry.java:775)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.nio.file.NoSuchFileException: /home/diego/Documentos/sts-4.12.1.RELEASE/plugins/org.eclipse.jgit.gpg.bc_5.13.0.202109080827-r.jar
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+	at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1851)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1264)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:709)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:243)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:172)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:186)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:264)
+	... 44 more
+
+!ENTRY org.eclipse.jgit.gpg.bc 4 0 2021-11-30 07:57:17.752
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.io.IOException: Exception in opening zip file: /home/diego/Documentos/sts-4.12.1.RELEASE/plugins/org.eclipse.jgit.gpg.bc_5.13.0.202109080827-r.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:277)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:51)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:135)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:274)
+	at org.eclipse.osgi.storage.bundlefile.BundleFile.getResourceURL(BundleFile.java:139)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathEntry.findResource(ClasspathEntry.java:213)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalResourceImpl(ClasspathManager.java:423)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalResourceImpl(ClasspathManager.java:410)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalResource(ClasspathManager.java:374)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalResource(ModuleClassLoader.java:337)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalResource(BundleLoader.java:867)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findResource(BundleLoader.java:646)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.getResource(ModuleClassLoader.java:215)
+	at java.base/java.util.ResourceBundle$Control$2.run(ResourceBundle.java:3228)
+	at java.base/java.util.ResourceBundle$Control$2.run(ResourceBundle.java:3226)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.base/java.util.ResourceBundle$Control.newBundle0(ResourceBundle.java:3225)
+	at java.base/java.util.ResourceBundle$Control.newBundle(ResourceBundle.java:3151)
+	at java.base/java.util.ResourceBundle.loadBundle(ResourceBundle.java:1984)
+	at java.base/java.util.ResourceBundle.findBundle(ResourceBundle.java:1770)
+	at java.base/java.util.ResourceBundle.findBundle(ResourceBundle.java:1722)
+	at java.base/java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1656)
+	at java.base/java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1586)
+	at java.base/java.util.ResourceBundle.getBundle(ResourceBundle.java:1280)
+	at org.eclipse.jgit.nls.TranslationBundle.load(TranslationBundle.java:138)
+	at org.eclipse.jgit.nls.GlobalBundleCache.lookupBundle(GlobalBundleCache.java:64)
+	at org.eclipse.jgit.nls.NLS.get(NLS.java:125)
+	at org.eclipse.jgit.nls.NLS.getBundleFor(NLS.java:101)
+	at org.eclipse.jgit.internal.JGitText.get(JGitText.java:28)
+	at org.eclipse.jgit.errors.RepositoryNotFoundException.message(RepositoryNotFoundException.java:69)
+	at org.eclipse.jgit.errors.RepositoryNotFoundException.<init>(RepositoryNotFoundException.java:53)
+	at org.eclipse.jgit.errors.RepositoryNotFoundException.<init>(RepositoryNotFoundException.java:31)
+	at org.eclipse.egit.core.RepositoryCache$Builder.createRepository(RepositoryCache.java:216)
+	at org.eclipse.egit.core.RepositoryCache$Builder.build(RepositoryCache.java:241)
+	at org.eclipse.egit.core.RepositoryCache$1.build(RepositoryCache.java:277)
+	at org.eclipse.egit.core.RepositoryCache$Builder.build(RepositoryCache.java:1)
+	at org.eclipse.jgit.submodule.SubmoduleWalk.getSubmoduleRepository(SubmoduleWalk.java:267)
+	at org.eclipse.jgit.submodule.SubmoduleWalk.getRepository(SubmoduleWalk.java:776)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:585)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.lambda$8(IndexDiffCacheEntry.java:634)
+	at org.eclipse.egit.core.UnitOfWork.run(UnitOfWork.java:115)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:627)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$5(IndexDiffCacheEntry.java:621)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$2.reload(IndexDiffCacheEntry.java:398)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$IndexDiffReloadJob.run(IndexDiffCacheEntry.java:775)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.nio.file.NoSuchFileException: /home/diego/Documentos/sts-4.12.1.RELEASE/plugins/org.eclipse.jgit.gpg.bc_5.13.0.202109080827-r.jar
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+	at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1851)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1264)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:709)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:243)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:172)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:186)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:264)
+	... 46 more
+
+!ENTRY org.eclipse.jgit.gpg.bc 4 0 2021-11-30 07:57:17.838
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.io.IOException: Exception in opening zip file: /home/diego/Documentos/sts-4.12.1.RELEASE/plugins/org.eclipse.jgit.gpg.bc_5.13.0.202109080827-r.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:277)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:51)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:135)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:274)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathEntry.findEntry(ClasspathEntry.java:195)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findClassImpl(ClasspathManager.java:623)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClassImpl(ClasspathManager.java:609)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClassImpl(ClasspathManager.java:596)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:568)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:388)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:467)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:170)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at java.base/java.util.ResourceBundle$Control.newBundle0(ResourceBundle.java:3170)
+	at java.base/java.util.ResourceBundle$Control.newBundle(ResourceBundle.java:3151)
+	at java.base/java.util.ResourceBundle.loadBundle(ResourceBundle.java:1984)
+	at java.base/java.util.ResourceBundle.findBundle(ResourceBundle.java:1770)
+	at java.base/java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1656)
+	at java.base/java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1586)
+	at java.base/java.util.ResourceBundle.getBundle(ResourceBundle.java:1280)
+	at org.eclipse.jgit.nls.TranslationBundle.load(TranslationBundle.java:138)
+	at org.eclipse.jgit.nls.GlobalBundleCache.lookupBundle(GlobalBundleCache.java:64)
+	at org.eclipse.jgit.nls.NLS.get(NLS.java:125)
+	at org.eclipse.jgit.nls.NLS.getBundleFor(NLS.java:101)
+	at org.eclipse.jgit.internal.JGitText.get(JGitText.java:28)
+	at org.eclipse.jgit.errors.RepositoryNotFoundException.message(RepositoryNotFoundException.java:69)
+	at org.eclipse.jgit.errors.RepositoryNotFoundException.<init>(RepositoryNotFoundException.java:53)
+	at org.eclipse.jgit.errors.RepositoryNotFoundException.<init>(RepositoryNotFoundException.java:31)
+	at org.eclipse.egit.core.RepositoryCache$Builder.createRepository(RepositoryCache.java:216)
+	at org.eclipse.egit.core.RepositoryCache$Builder.build(RepositoryCache.java:241)
+	at org.eclipse.egit.core.RepositoryCache$1.build(RepositoryCache.java:277)
+	at org.eclipse.egit.core.RepositoryCache$Builder.build(RepositoryCache.java:1)
+	at org.eclipse.jgit.submodule.SubmoduleWalk.getSubmoduleRepository(SubmoduleWalk.java:267)
+	at org.eclipse.jgit.submodule.SubmoduleWalk.getRepository(SubmoduleWalk.java:776)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:585)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.lambda$8(IndexDiffCacheEntry.java:634)
+	at org.eclipse.egit.core.UnitOfWork.run(UnitOfWork.java:115)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:627)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$5(IndexDiffCacheEntry.java:621)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$2.reload(IndexDiffCacheEntry.java:398)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$IndexDiffReloadJob.run(IndexDiffCacheEntry.java:775)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.nio.file.NoSuchFileException: /home/diego/Documentos/sts-4.12.1.RELEASE/plugins/org.eclipse.jgit.gpg.bc_5.13.0.202109080827-r.jar
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+	at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1851)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1264)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:709)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:243)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:172)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:186)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:264)
+	... 43 more
+
+!ENTRY org.eclipse.jgit.gpg.bc 4 0 2021-11-30 07:57:17.840
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.io.IOException: Exception in opening zip file: /home/diego/Documentos/sts-4.12.1.RELEASE/plugins/org.eclipse.jgit.gpg.bc_5.13.0.202109080827-r.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:277)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:51)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:135)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:274)
+	at org.eclipse.osgi.storage.bundlefile.BundleFile.getResourceURL(BundleFile.java:139)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathEntry.findResource(ClasspathEntry.java:213)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalResourceImpl(ClasspathManager.java:423)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalResourceImpl(ClasspathManager.java:410)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalResource(ClasspathManager.java:374)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalResource(ModuleClassLoader.java:337)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalResource(BundleLoader.java:867)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findResource(BundleLoader.java:646)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.getResource(ModuleClassLoader.java:215)
+	at java.base/java.util.ResourceBundle$Control$2.run(ResourceBundle.java:3228)
+	at java.base/java.util.ResourceBundle$Control$2.run(ResourceBundle.java:3226)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at java.base/java.util.ResourceBundle$Control.newBundle0(ResourceBundle.java:3225)
+	at java.base/java.util.ResourceBundle$Control.newBundle(ResourceBundle.java:3151)
+	at java.base/java.util.ResourceBundle.loadBundle(ResourceBundle.java:1984)
+	at java.base/java.util.ResourceBundle.findBundle(ResourceBundle.java:1770)
+	at java.base/java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1656)
+	at java.base/java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1586)
+	at java.base/java.util.ResourceBundle.getBundle(ResourceBundle.java:1280)
+	at org.eclipse.jgit.nls.TranslationBundle.load(TranslationBundle.java:138)
+	at org.eclipse.jgit.nls.GlobalBundleCache.lookupBundle(GlobalBundleCache.java:64)
+	at org.eclipse.jgit.nls.NLS.get(NLS.java:125)
+	at org.eclipse.jgit.nls.NLS.getBundleFor(NLS.java:101)
+	at org.eclipse.jgit.internal.JGitText.get(JGitText.java:28)
+	at org.eclipse.jgit.errors.RepositoryNotFoundException.message(RepositoryNotFoundException.java:69)
+	at org.eclipse.jgit.errors.RepositoryNotFoundException.<init>(RepositoryNotFoundException.java:53)
+	at org.eclipse.jgit.errors.RepositoryNotFoundException.<init>(RepositoryNotFoundException.java:31)
+	at org.eclipse.egit.core.RepositoryCache$Builder.createRepository(RepositoryCache.java:216)
+	at org.eclipse.egit.core.RepositoryCache$Builder.build(RepositoryCache.java:241)
+	at org.eclipse.egit.core.RepositoryCache$1.build(RepositoryCache.java:277)
+	at org.eclipse.egit.core.RepositoryCache$Builder.build(RepositoryCache.java:1)
+	at org.eclipse.jgit.submodule.SubmoduleWalk.getSubmoduleRepository(SubmoduleWalk.java:267)
+	at org.eclipse.jgit.submodule.SubmoduleWalk.getRepository(SubmoduleWalk.java:776)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:585)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.lambda$8(IndexDiffCacheEntry.java:634)
+	at org.eclipse.egit.core.UnitOfWork.run(UnitOfWork.java:115)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:627)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$5(IndexDiffCacheEntry.java:621)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$2.reload(IndexDiffCacheEntry.java:398)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$IndexDiffReloadJob.run(IndexDiffCacheEntry.java:775)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.nio.file.NoSuchFileException: /home/diego/Documentos/sts-4.12.1.RELEASE/plugins/org.eclipse.jgit.gpg.bc_5.13.0.202109080827-r.jar
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+	at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1851)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1264)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:709)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:243)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:172)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:186)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:264)
+	... 45 more
+
+!ENTRY org.eclipse.e4.ui.workbench.swt 4 0 2021-11-30 07:57:21.460
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.io.IOException: Exception in opening zip file: /home/diego/Documentos/sts-4.12.1.RELEASE/plugins/org.eclipse.e4.ui.workbench.swt_0.16.200.v20210723-1326.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:277)
+	at org.eclipse.osgi.storage.bundlefile.ZipBundleFile.doOpen(ZipBundleFile.java:51)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.open(CloseableBundleFile.java:135)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.lockOpen(CloseableBundleFile.java:77)
+	at org.eclipse.osgi.storage.bundlefile.CloseableBundleFile.getEntry(CloseableBundleFile.java:274)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathEntry.findEntry(ClasspathEntry.java:195)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findClassImpl(ClasspathManager.java:623)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClassImpl(ClasspathManager.java:609)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClassImpl(ClasspathManager.java:589)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:568)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:388)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:467)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:170)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at org.eclipse.e4.ui.internal.workbench.swt.ShellActivationListener.activate(ShellActivationListener.java:126)
+	at org.eclipse.e4.ui.internal.workbench.swt.ShellActivationListener.handleEvent(ShellActivationListener.java:76)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1934)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1521)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1548)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1527)
+	at org.eclipse.swt.widgets.Shell.gtk_focus_in_event(Shell.java:1599)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:2413)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:6840)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6147)
+	at org.eclipse.swt.internal.gtk3.GTK3.gtk_main_do_event(Native Method)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1562)
+	at org.eclipse.swt.internal.gtk3.GTK3.gtk_main_iteration_do(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4573)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+Caused by: java.nio.file.NoSuchFileException: /home/diego/Documentos/sts-4.12.1.RELEASE/plugins/org.eclipse.e4.ui.workbench.swt_0.16.200.v20210723-1326.jar
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+	at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1851)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1264)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:709)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:243)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:172)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:186)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:264)
+	... 51 more
+
+!ENTRY org.eclipse.ui 4 0 2021-11-30 07:57:21.462
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NoClassDefFoundError: org/eclipse/e4/ui/internal/workbench/swt/ShellActivationListener$2
+	at org.eclipse.e4.ui.internal.workbench.swt.ShellActivationListener.activate(ShellActivationListener.java:126)
+	at org.eclipse.e4.ui.internal.workbench.swt.ShellActivationListener.handleEvent(ShellActivationListener.java:76)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1934)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1521)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1548)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1527)
+	at org.eclipse.swt.widgets.Shell.gtk_focus_in_event(Shell.java:1599)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:2413)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:6840)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6147)
+	at org.eclipse.swt.internal.gtk3.GTK3.gtk_main_do_event(Native Method)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1562)
+	at org.eclipse.swt.internal.gtk3.GTK3.gtk_main_iteration_do(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4573)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.e4.ui.internal.workbench.swt.ShellActivationListener$2 cannot be found by org.eclipse.e4.ui.workbench.swt_0.16.200.v20210723-1326
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:506)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:170)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	... 37 more
