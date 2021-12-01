@@ -24,11 +24,19 @@ export class TodoService {
     return this.http.put<Todo>(url, todo);
   }
 
+
+  //metodo deletar todo
   delete(id: any):Observable<void>{
     const url = `${this.baseUrl}/${id}`
     return this.http.delete<void>(url);
   }
 
+  //metodo para criar todo
+  create(todo: Todo):Observable<Todo>{
+    return this.http.post<Todo>(this.baseUrl,todo);
+  }
+
+  //mensagem quando o todo for deletado
   message(msg: String): void{
     this.snack.open(`${msg}`, 'OK', {
       horizontalPosition: 'end',

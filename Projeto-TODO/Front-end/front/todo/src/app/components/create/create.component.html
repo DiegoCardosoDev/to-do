@@ -1,8 +1,9 @@
 <form>
     <h1>NOVO TO-DO</h1>
     <mat-form-field  class="data para finalizar" appearance="fill">
+      
         <mat-label>data para finalizar</mat-label>
-        <input matInput [matDatepicker]="dp3" disabled>
+        <input  [(ngModel)]="todo.dataParaFinalizar" name="todo.dataParaFinalizar" matInput [matDatepicker]="dp3" disabled>
         <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
         <mat-datepicker #dp3 disabled="false"></mat-datepicker>
       </mat-form-field>
@@ -10,18 +11,18 @@
    <div class="forms">
     <mat-form-field class="form" appearance="fill">
         <mat-label>Titulo</mat-label>
-        <input matInput placeholder="Ex. Estudar SpringBoot">
+        <input [(ngModel)]="todo.titulo" name="todo.titulo" matInput placeholder="Ex. Estudar SpringBoot">
       </mat-form-field>
 
       <mat-form-field class="form" appearance="fill">
         <mat-label>Descrição</mat-label>
-        <input matInput placeholder="Ex. ser full stack">
+        <input [(ngModel)]="todo.descricao" name="todo.descricao" matInput placeholder="Ex. ser full stack">
       </mat-form-field>
    </div>
 
    <div class="buttons">
-    <button mat-stroked-button color="primary">CRIAR</button>
-    <button mat-stroked-button color="warn">CANCELAR</button>
+    <button (click)="create()" mat-stroked-button color="primary">CRIAR</button>
+    <button (click)="cancel()" mat-stroked-button color="warn">CANCELAR</button>
 
 
    </div>
