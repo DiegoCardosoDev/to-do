@@ -38,6 +38,20 @@ export class ReadAllComponent implements OnInit {
     })
   }
 
+  //metodo finalizar tarefa
+  finalizar(item: Todo):void{
+    item.finalizar = true;
+    this.service.update(item).subscribe(() => {
+        this.service.message('Task Finalizada com sucesso!');
+        this.list = this.list.filter(todo => todo.id !== item.id);
+        this.closed++;
+      
+
+
+    });
+    
+  }
+
   //metodo deletar
   delete(id: any):void{
     this.service.delete(id).subscribe((resposta) => {
@@ -54,6 +68,8 @@ export class ReadAllComponent implements OnInit {
     this.router.navigate(['finalizar'])
 
   }
+
+ 
  
 
 }
