@@ -45,8 +45,6 @@ export class ReadAllComponent implements OnInit {
         this.service.message('Task Finalizada com sucesso!');
         this.list = this.list.filter(todo => todo.id !== item.id);
         this.closed++;
-      
-
 
     });
     
