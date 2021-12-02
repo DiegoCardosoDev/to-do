@@ -10,10 +10,10 @@ import { TodoService } from 'src/app/services/todo.service';
 })
 export class CreateComponent implements OnInit {
 
-  //instacia do objeto odo
+  //instacia do objeto todo
   todo: Todo  = {
-    titulo: '',
-    descricao: '',
+    titulo: " ",
+    descricao: " ",
     dataParaFinalizar: new Date(),
     finalizar: false
   }
@@ -23,23 +23,21 @@ export class CreateComponent implements OnInit {
   constructor(private router: Router, private service: TodoService) { }
 
   ngOnInit(): void {
+
   }
 
   //metodo create
+
   create():void{
-    this.formataData();//sera chamado para formatar a data como no back
-    this.service.create(this.todo).subscribe(( resposta)=>{
-      this.service.message('To-do Criado Com Sucesso!');
-      this.router.navigate(['']);//volta para tela inicial
-
-      //se o der algum erro
+    this.formataData();
+    this.service.create(this.todo).subscribe((resposta) =>{
+      this.service.message('To-do criado!')
+      this.router.navigate(['']);
     }, err =>{
-      this.service.message('Falha ao Criar To-do...');
-      this.router.navigate(['']);//volta para tela inicial
-
+      this.service.message('falha ao criar to-do!')
+      this.router.navigate(['']);
     })
   }
-
 
   //implementação do botao cancelar,volta para home
   cancel():void{

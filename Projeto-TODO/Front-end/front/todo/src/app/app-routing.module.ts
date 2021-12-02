@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CreateComponent } from './components/create/create.component';
 import { FinalizadosComponent } from './components/finalizados/finalizados.component';
 import { ReadAllComponent } from './components/read-all/read-all.component';
+import { UpdateComponent } from './components/update/update.component';
 
 //rotas
 const routes: Routes = [
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path:'create',
     component: CreateComponent
+  },
+  {
+    path:'update/:id',
+    component: UpdateComponent
   }
 ];
 

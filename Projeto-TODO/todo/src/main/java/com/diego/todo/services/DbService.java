@@ -23,6 +23,7 @@ public class DbService {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		
 
+		//instacia dos objetos to-dos
 		Todo t1 = new Todo(null, "estudar ", "estudar spring boot", sdf.parse("20/11/2021"),	true);
 		Todo t2 = new Todo(null, "revisar", "curriculo", sdf.parse("20/11/2021"),true);
 		Todo t3 = new Todo(null, "estudar", "estudar mysql", sdf.parse("20/11/2021"),false);
