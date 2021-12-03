@@ -20,9 +20,9 @@ import com.diego.todo.domain.Todo;
 import com.diego.todo.services.TodoService;
 
 
-@CrossOrigin("*")
+@CrossOrigin("*")//requisiçoes de mutiplas fontes
 @RestController
-@RequestMapping(value = "/todos")
+@RequestMapping(value = "/todos")//endpoint
 public class TodoResource {
 
 	@Autowired

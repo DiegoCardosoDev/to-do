@@ -12,8 +12,8 @@ export class CreateComponent implements OnInit {
 
   //instacia do objeto todo
   todo: Todo  = {
-    titulo: " ",
-    descricao: " ",
+    titulo: '',
+    descricao: '',
     dataParaFinalizar: new Date(),
     finalizar: false
   }
@@ -27,7 +27,6 @@ export class CreateComponent implements OnInit {
   }
 
   //metodo create
-
   create():void{
     this.formataData();
     this.service.create(this.todo).subscribe((resposta) =>{
@@ -49,7 +48,7 @@ export class CreateComponent implements OnInit {
   //metodo pra formatar a data como o back exige
   formataData():void{
     let data = new Date(this.todo.dataParaFinalizar)
-    this.todo.dataParaFinalizar = `${data.getDate()} /${data.getMonth() + 1} /${data.getFullYear()}`
+    this.todo.dataParaFinalizar = `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}`
   }
 
 }

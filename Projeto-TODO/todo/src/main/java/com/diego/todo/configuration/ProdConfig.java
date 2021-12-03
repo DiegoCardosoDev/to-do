@@ -10,8 +10,8 @@ import org.springframework.context.annotation.Profile;
 import com.diego.todo.services.DbService;
 
 @Configuration
-@Profile("teste")
-public class TestConfig {
+@Profile("prod")
+public class ProdConfig {
 
 	@Autowired
 	private DbService service;
