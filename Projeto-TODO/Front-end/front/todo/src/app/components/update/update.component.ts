@@ -10,8 +10,9 @@ import { TodoService } from 'src/app/services/todo.service';
 })
 export class UpdateComponent implements OnInit {
 
+  //instacia do objeto todo
   todo: Todo  = {
-    titulo: ' ' ,
+    titulo: '',
     descricao: '',
     dataParaFinalizar: new Date(),
     finalizar: false
@@ -19,32 +20,34 @@ export class UpdateComponent implements OnInit {
 
 
   //construtor
-  constructor(private router: Router, private service: TodoService, private route: ActivatedRoute) { }
+  constructor(private router: Router, private service: TodoService,private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.todo.id = this.route.snapshot.paramMap.get("id")!;
     this.findById();
 
+
+
   }
 
-  findById():void{
+  findById(): void{
     this.service.findById(this.todo.id).subscribe((resposta) => {
-      this.todo = resposta;
+      this.todo = resposta
     })
+
   }
 
+  //metodo create
   update():void{
-    this.service.update(this.todo).subscribe((resposta) =>{
-      this.service.message('informações atualizadas com sucesso!');
+    this.formataData();
+    this.service.create(this.todo).subscribe((resposta) =>{
+      this.service.message('To-do Atualizado!')
       this.router.navigate(['']);
-    }, error => {
-      this.service.message('erro ao atualizar to-do...');
+    }, err =>{
+      this.service.message('falha ao Atualizar to-do!')
       this.router.navigate(['']);
-
     })
-
   }
-
 
   //implementação do botao cancelar,volta para home
   cancel():void{
@@ -56,7 +59,7 @@ export class UpdateComponent implements OnInit {
   //metodo pra formatar a data como o back exige
   formataData():void{
     let data = new Date(this.todo.dataParaFinalizar)
-    this.todo.dataParaFinalizar = `${data.getDate()} /${data.getMonth() + 1} /${data.getFullYear()}`
+    this.todo.dataParaFinalizar = `${data.getDate()}/${data.getMonth() + 1}/${data.getFullYear()}`
   }
 
 }
