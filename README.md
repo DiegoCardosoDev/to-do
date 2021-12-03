@@ -6,6 +6,7 @@
 * jpa
 * spring
 * h2 database
+* Postman
 * maven para gerenciar as dependencias
 
 # *back-End Run:*
@@ -18,5 +19,6 @@
 * Angular v12
 * html 5
 * css 3
+* Typescript
 # *Front-end run:*
 ![fronttodo](https://user-images.githubusercontent.com/83510729/144042524-45dcfb8e-aead-43b1-b754-a3fd9c33128d.png)
