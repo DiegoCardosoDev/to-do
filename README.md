@@ -1,5 +1,5 @@
 # TO-DO List Project
-## O projeto tem como objetivo de criar,atualizar,deletar tarefas, realizando um CRUD completo,aplicando boas praticas de programação, e (POO) orientação a objetos em java.
+## O projeto tem como objetivo de criar,atualizar,deletar tarefas, realizando um CRUD completo,aplicando boas praticas de programação, e engenharia de software, e (POO) orientação a objetos em java.ultilizando spring para fazer o mapeamento e inserção das dependencias com maven. O banco usado foi  o h2 que roda em tempo de compilção.
 
 ### no Back end usei:
 * java 11
